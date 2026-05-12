@@ -1,22 +1,22 @@
 class Sessions < Formula
   desc "Find and resume AI coding sessions (Claude Code, Codex, Pi)"
   homepage "https://github.com/nicknisi/sessions"
-  version "1.2.0"
+  version "1.3.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/nicknisi/sessions/releases/download/v#{version}/sessions-darwin-arm64.tar.gz"
-      sha256 "0dd06c4bba4af207818e271658204c9e89c9d5a14cfda89f2c9fd471d7bb3d3a"
+      sha256 "0b557799825f371f45be6fb80eb51367154238ec227924be59652528c7cb22b9"
     else
       url "https://github.com/nicknisi/sessions/releases/download/v#{version}/sessions-darwin-x86_64.tar.gz"
-      sha256 "d721223c2d80e13bc185eed23b7dbf6906448abc68a793df9158d3fc53dd19c9"
+      sha256 "59dba2512325a0ba50c59d3876065a9a707a53d75ff1ba9065e0c35432cf8bd1"
     end
   end
 
   on_linux do
     url "https://github.com/nicknisi/sessions/releases/download/v#{version}/sessions-linux-x86_64.tar.gz"
-    sha256 "cf56528698f2e05a1149d4c8fde8efe7e13064c5bb153829d5a13caab8c2352a"
+    sha256 "6fd08b0f1c7f54373e46aa67a03d5306ad5ce8e3d10b7d812320f5a7246192c1"
   end
 
   def install

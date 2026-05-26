@@ -1,22 +1,22 @@
 class Tm < Formula
   desc "Grid-based tmux session switcher with live pane previews"
   homepage "https://github.com/nicknisi/tm"
-  version "0.3.0"
+  version "0.4.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/nicknisi/tm/releases/download/v#{version}/tm-darwin-arm64.tar.gz"
-      sha256 "67aa5452e8e491ce279df40fd356e0f416fccf97f0c45d9e15bfb309cbd9e159"
+      sha256 "909daa5daa35f0a25659ae605546e1f3e836325f78e989d5e5acb120444cb25e"
     else
       url "https://github.com/nicknisi/tm/releases/download/v#{version}/tm-darwin-x86_64.tar.gz"
-      sha256 "634c3bad150086b47efc372845573027734bfc9d4aeb5e22709a2c221d285771"
+      sha256 "c3b2ebc0411248ae2f0a75c11baa2f719ac182c2432bf189aeb3e62b0a70d602"
     end
   end
 
   on_linux do
     url "https://github.com/nicknisi/tm/releases/download/v#{version}/tm-linux-x86_64.tar.gz"
-    sha256 "f386b0702ec369fe3adde6d5c2b06022809828888eb78088ce6e0d9beb1e04eb"
+    sha256 "99638adda76c1f6bee3893586d22e8c06fa284f4e6b91822c7b9ee14a59d1949"
   end
 
   def install

@@ -1,22 +1,22 @@
 class Fleet < Formula
   desc "Agent dashboard TUI for managing AI sessions in tmux"
   homepage "https://github.com/nicknisi/fleet"
-  version "0.10.1"
+  version "0.11.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/nicknisi/fleet/releases/download/v#{version}/fleet-darwin-arm64.tar.gz"
-      sha256 "751e3dcd5e13e57e3aa9bf376259fba5f6a6f923e85f457abd113bf2bc21bdb0"
+      sha256 "66ef4c821f57df7786697417f9a5ab7038ff17e0d83ec8ecba1fcc588166b37b"
     else
       url "https://github.com/nicknisi/fleet/releases/download/v#{version}/fleet-darwin-x86_64.tar.gz"
-      sha256 "1f7061156354e0b3afdbd8db9eb96d03213c4c50568eaf5e2112b21046378c66"
+      sha256 "5a9c51094a76d38b2422cb2ce8089c1c83cb6caeb141de002d8b3bb94b5e2754"
     end
   end
 
   on_linux do
     url "https://github.com/nicknisi/fleet/releases/download/v#{version}/fleet-linux-x86_64.tar.gz"
-    sha256 "b6e6c8182ea92c44e18107eccc6002d02df166c82e8d782ab54217f74b60466d"
+    sha256 "974648756a5c2fc6070b22070dcadb82ce1b636408491c2ea537cfd9918f697c"
   end
 
   def install

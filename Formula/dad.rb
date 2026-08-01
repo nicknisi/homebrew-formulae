@@ -1,22 +1,22 @@
 class Dad < Formula
   desc "GitHub PRs as narrated stories — AI-powered semantic diff review"
   homepage "https://github.com/nicknisi/diffdad"
-  version "0.14.0"
+  version "0.15.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/nicknisi/diffdad/releases/download/v#{version}/dad-darwin-arm64.tar.gz"
-      sha256 "b7f9eaa60d993980bd9a59fdacbc96dc7db604982739d33bb259593cd4b2189e"
+      sha256 "2666bcc40804a0330df6b1aa4f82ddc827a122b1386bc356ed73717bda58003b"
     else
       url "https://github.com/nicknisi/diffdad/releases/download/v#{version}/dad-darwin-x86_64.tar.gz"
-      sha256 "8416f83cde891131ee4eb7abbe88a1dde6608effe70f622be896fcc0bb59f859"
+      sha256 "e7212418a3806f265b22a0c1655f77c558c245984fd4bc8548debf97a9147547"
     end
   end
 
   on_linux do
     url "https://github.com/nicknisi/diffdad/releases/download/v#{version}/dad-linux-x86_64.tar.gz"
-    sha256 "dbd8820d306b9dfaabbd4cfd4a7b192d8d233d0e644a8025eeee6e0c26a93319"
+    sha256 "df6ad01db3cb839bf7d3155a0698d67b927248ed99e532fd4ec86dc0a134786b"
   end
 
   def install

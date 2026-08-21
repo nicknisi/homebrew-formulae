@@ -15,8 +15,13 @@ class Fleet < Formula
   end
 
   on_linux do
-    url "https://github.com/nicknisi/fleet/releases/download/v#{version}/fleet-linux-x86_64.tar.gz"
-    sha256 "a0e4fc26fde8e2b267739d24f32ec554f1954be516c9d4ab951275962a16a6c3"
+    if Hardware::CPU.arm?
+      url "https://github.com/nicknisi/fleet/releases/download/v#{version}/fleet-linux-arm64.tar.gz"
+      sha256 "PLACEHOLDER_LINUX_ARM64"
+    else
+      url "https://github.com/nicknisi/fleet/releases/download/v#{version}/fleet-linux-x86_64.tar.gz"
+      sha256 "a0e4fc26fde8e2b267739d24f32ec554f1954be516c9d4ab951275962a16a6c3"
+    end
   end
 
   def install

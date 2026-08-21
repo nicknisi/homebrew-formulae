@@ -15,8 +15,13 @@ class Sessions < Formula
   end
 
   on_linux do
-    url "https://github.com/nicknisi/sessions/releases/download/v#{version}/sessions-linux-x86_64.tar.gz"
-    sha256 "af1d7bcb03bba5ef201caa23533212e4b8c8ab97dd08433b7a2474c7d73be7c5"
+    if Hardware::CPU.arm?
+      url "https://github.com/nicknisi/sessions/releases/download/v#{version}/sessions-linux-arm64.tar.gz"
+      sha256 "PLACEHOLDER_LINUX_ARM64"
+    else
+      url "https://github.com/nicknisi/sessions/releases/download/v#{version}/sessions-linux-x86_64.tar.gz"
+      sha256 "af1d7bcb03bba5ef201caa23533212e4b8c8ab97dd08433b7a2474c7d73be7c5"
+    end
   end
 
   def install

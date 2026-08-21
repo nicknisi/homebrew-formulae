@@ -15,8 +15,13 @@ class Dad < Formula
   end
 
   on_linux do
-    url "https://github.com/nicknisi/diffdad/releases/download/v#{version}/dad-linux-x86_64.tar.gz"
-    sha256 "68728a0efc559d023a93910b1d2624bf310a890f131b6c333d70d1f29efb5101"
+    if Hardware::CPU.arm?
+      url "https://github.com/nicknisi/diffdad/releases/download/v#{version}/dad-linux-aarch64.tar.gz"
+      sha256 "4cc772b12872ef4927b2fd2fa68130e87580b2472f9616f9a14bbea977086d42"
+    else
+      url "https://github.com/nicknisi/diffdad/releases/download/v#{version}/dad-linux-x86_64.tar.gz"
+      sha256 "68728a0efc559d023a93910b1d2624bf310a890f131b6c333d70d1f29efb5101"
+    end
   end
 
   def install
